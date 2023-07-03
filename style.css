@@ -1,0 +1,445 @@
+/* COLOURS*/
+/* 
+### PRIMARY
+
+- Purple: hsl(259, 100%, 65%)
+- Light red: hsl(0, 100%, 67%)
+
+### NEUTRAL
+
+- White: hsl(0, 0%, 100%)
+- Off white: hsl(0, 0%, 94%)
+- Light grey: hsl(0, 0%, 86%)
+- Smokey grey: hsl(0, 1%, 44%)
+- Off black: hsl(0, 0%, 8%)
+
+
+/* FONT-SIZE */
+/* Font size (inputs): 32px */
+
+html {
+  font-size: 62.5%;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f0f0f0;
+  color: #141414;
+}
+
+.container {
+  max-width: 100rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: #fff;
+
+  padding: 3.2rem 6.4rem 3.2rem 4.8rem;
+  border-radius: 25px;
+  border-bottom-right-radius: 150px;
+
+  transform: translate(-50%, -50%);
+}
+/* INPUT FIELD */
+
+.field {
+  padding: 2.4rem 0 4.8rem;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+
+  border-bottom: 2px solid #dbdbdb;
+  margin-bottom: 1.2rem;
+
+  position: relative;
+}
+
+.input-field {
+  position: relative;
+}
+
+.input-field label {
+  text-transform: uppercase;
+  color: #716f6f;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+}
+
+.year,
+.day,
+.month {
+  font-size: 2.4rem;
+  font-style: inherit;
+  color: #141414;
+  font-weight: 700;
+
+  max-width: 13rem;
+  margin-top: 0.5rem;
+  padding: 1.4rem;
+  border-radius: 5px;
+}
+.day {
+  border-top: 1px solid #716f6f;
+  border-right: 1px solid #716f6f;
+  border-bottom: 1px solid #dbdbdb;
+  border-left: 1px solid #dbdbdb;
+}
+.month {
+  border-top: 1px solid #716f6f;
+  border-left: 1px solid #716f6f;
+  border-bottom: 1px solid #dbdbdb;
+  border-right: 1px solid #dbdbdb;
+}
+.year {
+  border-top: 1px solid #716f6f;
+  border-right: 1px solid #716f6f;
+  border-bottom: 1px solid #dbdbdb;
+  border-left: 1px solid #dbdbdb;
+}
+
+.input-field input::placeholder {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+.input-field input:focus {
+  outline: 2px solid #854dff;
+}
+
+/* ERROr MESSAGES */
+.error label {
+  color: #ff5757;
+}
+.error input {
+  border-color: red;
+}
+.error-span--empty {
+  display: none;
+  color: #ff5757;
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-style: italic;
+
+  position: absolute;
+  bottom: -25%;
+  left: 0;
+}
+.error-span--invalid {
+  display: none;
+  color: #ff5757;
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-style: italic;
+  width: 120%;
+  position: absolute;
+  bottom: -25%;
+  left: 0;
+}
+.error-span--form {
+  display: none;
+  color: #ff5757;
+
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-style: italic;
+
+  position: absolute;
+  top: 70%;
+}
+
+/* SUBMIT BUTTON */
+
+.submit {
+  border-radius: 50%;
+  width: 8rem;
+  height: 8rem;
+  border: none;
+  background-color: #854dff;
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  transform: translate(50%, 50%);
+}
+.submit svg {
+  width: 4rem;
+  height: 4rem;
+}
+
+.submit:hover {
+  background-color: #7441e0;
+}
+.submit:active {
+  background-color: #141414;
+}
+
+/* DISPLAY FIELD */
+.display {
+  padding: 1.2rem;
+}
+
+.display-text {
+  font-size: 8rem;
+  font-weight: 800;
+  font-style: italic;
+  line-height: 1.1;
+}
+
+.text {
+  color: #854dff;
+}
+
+/* RESPONSIVE STYLING */
+/* ///////////////////////////////////////////// */
+
+/* at 1500px */
+@media (max-width: 94em) {
+  .display-text {
+    font-size: 7rem;
+  }
+}
+
+/* at 1360 px */
+@media (max-width: 85em) {
+  .field {
+    /* padding: 1.2rem 0 2.4rem; */
+    gap: 2.5rem;
+  }
+
+  .year,
+  .day,
+  .month {
+    font-size: 1.8rem;
+    max-width: 11rem;
+  }
+
+  .submit {
+    width: 6rem;
+    height: 6rem;
+  }
+
+  .display-text {
+    font-size: 6rem;
+  }
+  .error-span--invalid,
+  .error-span--empty,
+  .error-span--form {
+    font-size: 1rem;
+  }
+}
+
+/* at 1208px */
+@media (max-width: 76em) {
+  .container {
+    padding: 1.2rem 2.4rem;
+  }
+  .display-text {
+    font-size: 5rem;
+  }
+  .submit {
+    right: 5%;
+    width: 6rem;
+    height: 6rem;
+  }
+  .submit svg {
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+}
+
+/* @ 1072 */
+@media (max-width: 67em) {
+  .year,
+  .day,
+  .month {
+    padding: 1rem;
+    max-width: 9rem;
+  }
+  .input-field input::placeholder {
+    font-size: 1.8rem;
+  }
+  .error-span--invalid,
+  .error-span--empty,
+  .error-span--form {
+    font-size: 0.8rem;
+  }
+  .display-text {
+    font-size: 4.2rem;
+  }
+}
+
+/* @ 960px */
+@media (max-width: 60em) {
+  .field {
+    gap: 1.4rem;
+  }
+}
+
+/* @ 920px */
+@media (max-width: 58em) {
+  .field {
+    gap: 1rem;
+  }
+  .display-text {
+    font-size: 3.5rem;
+  }
+}
+
+/* @840 */
+@media (max-width: 53em) {
+  .container {
+    border-bottom-right-radius: 80px;
+  }
+  .field {
+    justify-content: center;
+  }
+  .display {
+    text-align: center;
+  }
+  .year,
+  .day,
+  .month {
+    padding: 0.8rem;
+    font-size: 1.4rem;
+    max-width: 7rem;
+  }
+  .input-field label {
+    font-size: 0.8rem;
+  }
+  .input-field input::placeholder {
+    font-size: 1.4rem;
+  }
+  .error-span--invalid,
+  .error-span--empty,
+  .error-span--form {
+    font-size: 0.6rem;
+    width: 100%;
+  }
+
+  .display-text {
+    font-size: 3.2rem;
+  }
+  .submit {
+    right: 50%;
+    width: 4.2rem;
+    height: 4.2rem;
+  }
+  .submit svg {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+}
+
+/* @ 740px */
+@media (max-width: 46em) {
+  .year,
+  .day,
+  .month {
+    padding: 0.8rem;
+    font-size: 1.2rem;
+    max-width: 6rem;
+  }
+
+  .input-field input::placeholder {
+    font-size: 1.2rem;
+  }
+  .error-span--invalid,
+  .error-span--empty,
+  .error-span--form {
+    font-size: 0.5rem;
+    width: 120%;
+  }
+
+  .display-text {
+    font-size: 2.3rem;
+  }
+  .submit {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+  .submit svg {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+/*  @ 643px */
+@media (max-width: 40em) {
+  .container {
+    border-bottom-right-radius: 50px;
+  }
+}
+
+/* @510 */
+@media (max-width: 32em) {
+  .field {
+    padding-bottom: 4rem;
+  }
+  .year,
+  .day,
+  .month {
+    max-width: 5rem;
+  }
+  .display-text {
+    font-size: 1.8rem;
+  }
+  .input-field label {
+    font-size: 0.6rem;
+  }
+}
+
+/* @440 */
+@media (max-width: 28em) {
+  .year,
+  .day,
+  .month {
+    padding: 0.7rem;
+    font-size: 1.1rem;
+    max-width: 4.5rem;
+  }
+  .input-field input::placeholder {
+    font-size: 1.1rem;
+  }
+  .error-span--invalid,
+  .error-span--empty,
+  .error-span--form {
+    font-size: 0.4rem;
+  }
+  .display-text {
+    font-size: 1.4rem;
+  }
+}
+
+/* @ 384 */
+@media (max-width: 24em) {
+  .year,
+  .day,
+  .month {
+    padding: 0.6rem;
+    font-size: 1rem;
+    max-width: 4rem;
+  }
+  .input-field input::placeholder {
+    font-size: 1rem;
+  }
+  .input-field label {
+    font-size: 0.6rem;
+  }
+  .submit {
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+  .submit svg {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+  .display-text {
+    font-size: 1.2rem;
+  }
+}

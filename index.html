@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap"
+      rel="stylesheet"
+    />
+
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Age calculator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  </head>
+  <body>
+    <article>
+      <div class="container">
+        <form action="" class="field">
+          <div class="input-field">
+            <label for="day">day</label> <br />
+            <input
+              type="number"
+              name="day"
+              class="day"
+              id="day"
+              placeholder="DD"
+            />
+            <span class="error-span--empty"> This field is required </span>
+            <span class="error-span--invalid"> Must be a valid day </span>
+          </div>
+          <div class="input-field">
+            <label for="month">month</label> <br />
+            <input
+              class="month"
+              type="number"
+              name="month"
+              id="month"
+              placeholder="MM"
+            />
+            <span class="error-span--empty"> This field is required </span>
+            <span class="error-span--invalid"> Must be a valid month </span>
+          </div>
+          <div class="input-field">
+            <label for="year">year</label> <br />
+
+            <input
+              class="year"
+              type="number"
+              name="year"
+              id="year"
+              placeholder="YYYY"
+            />
+            <span class="error-span--empty"> This field is required </span>
+            <span class="error-span--invalid"> Must be in the past </span>
+          </div>
+          <button type="submit" class="submit">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46 44">
+              <g fill="none" stroke="#FFF" stroke-width="2">
+                <path
+                  d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44"
+                />
+              </g>
+            </svg>
+          </button>
+          <span class="error-span--form"> Must be a valid date </span>
+        </form>
+
+        <div class="display">
+          <p class="display-text"><span class="text years">--</span> year(s)</p>
+          <p class="display-text">
+            <span class="text months">--</span> month(s)
+          </p>
+          <p class="display-text"><span class="text days">--</span> day(s)</p>
+        </div>
+      </div>
+    </article>
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+  </body>
+</html>
